@@ -1,0 +1,22 @@
+{
+  "specName": "automa-spec",
+  "version": "1.0.0",
+  "resultSchema": "conformance-result.v1",
+  "profiles": {
+    "core": {
+      "version": "1.0.0",
+      "status": "accepted",
+      "spec": "core-spec.md",
+      "wireFormats": { "report": 1, "statebag": 1 },
+      "fixtures": ["behavior/**", "serialization/**"]
+    },
+    "durability": {
+      "version": "1.0.0",
+      "status": "accepted",
+      "spec": "durability-spec.md",
+      "extends": "core",
+      "wireFormats": { "journal": 1 },
+      "fixtures": ["journal/**"]
+    }
+  }
+}
